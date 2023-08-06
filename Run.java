@@ -1,4 +1,5 @@
 import ds.linkedlist.SinglyLinkedList;
+import ds.queue.ArrayQueue;
 import ds.stack.ArrayStack;
 import ds.stack.LinkedStack;
 
@@ -8,15 +9,15 @@ public class Run {
          * ArrayStack & LinkedStack
          */
         // ArrayStack<Integer> stack = new ArrayStack<>();
-        LinkedStack<Integer> stack = new LinkedStack<>();
+        // LinkedStack<Integer> stack = new LinkedStack<>();
 
-        stack.push(3);
-        stack.push(2);
-        stack.push(1);
-        System.out.println(stack.isEmpty());
-        System.out.println(stack.size());
-        System.out.println(stack.pop());
-        System.out.println(stack.peek());
+        // stack.push(3);
+        // stack.push(2);
+        // stack.push(1);
+        // System.out.println(stack.isEmpty());
+        // System.out.println(stack.size());
+        // System.out.println(stack.pop());
+        // System.out.println(stack.peek());
 
         /**
          * SinglyLinkedList
@@ -32,5 +33,17 @@ public class Run {
         // System.out.println(list.last());
         // System.out.println(list.removeFirst());
         // System.out.println(list.first());
+
+        /**
+         * ArrayQueue
+         */
+        ArrayQueue<Integer> queue = new ArrayQueue<>(2);
+
+        queue.enqueue(3);
+        queue.dequeue();
+        queue.enqueue(88);
+        System.out.println(queue.first());
+        System.out.println(queue.size());
+        System.out.println(queue.isEmpty());
     }
 }
