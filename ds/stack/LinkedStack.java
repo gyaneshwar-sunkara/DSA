@@ -39,7 +39,7 @@ public class LinkedStack<E> implements Stack<E> {
         return list.size();
     }
 
-    public boolean empty() {
+    public boolean isEmpty() {
         return list.isEmpty();
     }
 

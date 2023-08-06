@@ -46,6 +46,6 @@ public interface Stack<E> {
      * 
      * @return `true` if stack is empty, `false` otherwise
      */
-    boolean empty();
+    boolean isEmpty();
 
 }

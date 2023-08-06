@@ -45,7 +45,7 @@ public class ArrayStack<E> implements Stack<E> {
     }
 
     public E pop() {
-        if (empty())
+        if (isEmpty())
             return null;
 
         E top = stack[t];
@@ -56,7 +56,7 @@ public class ArrayStack<E> implements Stack<E> {
     }
 
     public E peek() {
-        if (empty())
+        if (isEmpty())
             return null;
 
         return stack[t];
@@ -66,7 +66,7 @@ public class ArrayStack<E> implements Stack<E> {
         return (t + 1);
     }
 
-    public boolean empty() {
+    public boolean isEmpty() {
         return (t == -1);
     }
 
