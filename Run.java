@@ -1,5 +1,6 @@
 import ds.linkedlist.SinglyLinkedList;
 import ds.queue.ArrayQueue;
+import ds.queue.LinkedQueue;
 import ds.stack.ArrayStack;
 import ds.stack.LinkedStack;
 
@@ -35,9 +36,10 @@ public class Run {
         // System.out.println(list.first());
 
         /**
-         * ArrayQueue
+         * ArrayQueue & LinkedQueue
          */
-        ArrayQueue<Integer> queue = new ArrayQueue<>(2);
+        // ArrayQueue<Integer> queue = new ArrayQueue<>(2);
+        LinkedQueue<Integer> queue = new LinkedQueue<>();
 
         queue.enqueue(3);
         queue.dequeue();
