@@ -1,1 +1,1 @@
-# Data Structures in JAVA
+# Data Structures in JS & JAVA

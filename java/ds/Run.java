@@ -1,3 +1,5 @@
+package ds;
+
 import ds.linkedlist.CircularlyLinkedList;
 import ds.linkedlist.SinglyLinkedList;
 import ds.queue.ArrayQueue;
