@@ -1,4 +1,13 @@
 "use strict";
+/**
+ * Linear Search
+ *
+ * Time Complexity: O(n)
+ *
+ * @param arr - An array of numbers/strings
+ * @param target - A number/string
+ * @returns Indices of target
+ */
 Object.defineProperty(exports, "__esModule", { value: true });
 function LinearSearch(arr, target) {
     let indices = [];

@@ -1,3 +1,13 @@
+/**
+ * Linear Search
+ *
+ * Time Complexity: O(n)
+ *
+ * @param arr - An array of numbers/strings
+ * @param target - A number/string
+ * @returns Indices of target
+ */
+
 export default function LinearSearch(
   arr: Array<number | string>,
   target: number | string
