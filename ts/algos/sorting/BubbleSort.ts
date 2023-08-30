@@ -14,7 +14,7 @@ export default function sort(
   arr: Array<string | number>
 ): Array<string | number> {
   let i: number, j: number;
-  let swapped: boolean = false;
+  let swapped: boolean = false; // This improves best case time from n^2 to n by exiting quickly similar to insertion sort
 
   for (i = 0; i < arr.length; i++) {
     swapped = false;

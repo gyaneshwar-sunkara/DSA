@@ -13,7 +13,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 function sort(arr) {
     let i, j;
-    let swapped = false;
+    let swapped = false; // This improves best case time from n^2 to n by exiting quickly similar to insertion sort
     for (i = 0; i < arr.length; i++) {
         swapped = false;
         for (j = 0; j < arr.length - i; j++) {
@@ -29,4 +29,4 @@ function sort(arr) {
     return arr;
 }
 exports.default = sort;
-console.log(sort(['d', 'b', 'a']));
+console.log(sort(["d", "b", "a"]));

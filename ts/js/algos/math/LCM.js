@@ -9,4 +9,4 @@ function lcm(a, b) {
 }
 exports.default = lcm;
 ;
-console.log(lcm(34, 27));
+console.log(lcm(34, 77));
