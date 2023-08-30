@@ -7,10 +7,12 @@
  *
  * Memory - 1
  * Stable - Yes
- * 
+ *
  *  */
 
-export default function sort(arr: Array<string | number>) {
+export default function sort(
+  arr: Array<string | number>
+): Array<string | number> {
   let i: number, j: number;
   let swapped: boolean = false;
 
@@ -30,4 +32,4 @@ export default function sort(arr: Array<string | number>) {
   return arr;
 }
 
-console.log(sort(['d', 'b', 'a']));
+console.log(sort(["d", "b", "a"]));
