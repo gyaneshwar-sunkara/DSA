@@ -1,5 +1,6 @@
 import LinkedList from "./linkedlist/LinkedList";
 import Stack from "./stack/Stack";
+import Queue from "./queue/Queue";
 
 function testLinkedList() {
   var ll: LinkedList<number> = new LinkedList();
@@ -29,5 +30,19 @@ function testStack() {
   console.log(stack.isEmpty());
 }
 
+function testQueue() {
+  var queue: Queue<string> = new Queue();
+  queue.enqueue("hello");
+  queue.enqueue("world");
+  console.log(queue.peek());
+  console.log(queue.dequeue());
+  console.log(queue.peek());
+  console.log(queue.size());
+  console.log(queue.dequeue());
+  console.log(queue.dequeue());
+  console.log(queue.isEmpty());
+}
+
 // testLinkedList();
-testStack();
+// testStack();
+testQueue();

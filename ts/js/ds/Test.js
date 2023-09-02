@@ -5,6 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const LinkedList_1 = __importDefault(require("./linkedlist/LinkedList"));
 const Stack_1 = __importDefault(require("./stack/Stack"));
+const Queue_1 = __importDefault(require("./queue/Queue"));
 function testLinkedList() {
     var ll = new LinkedList_1.default();
     ll.addFirst(3);
@@ -29,5 +30,18 @@ function testStack() {
     console.log(stack.pop());
     console.log(stack.isEmpty());
 }
+function testQueue() {
+    var queue = new Queue_1.default();
+    queue.enqueue("hello");
+    queue.enqueue("world");
+    console.log(queue.peek());
+    console.log(queue.dequeue());
+    console.log(queue.peek());
+    console.log(queue.size());
+    console.log(queue.dequeue());
+    console.log(queue.dequeue());
+    console.log(queue.isEmpty());
+}
 // testLinkedList();
-testStack();
+// testStack();
+testQueue();
