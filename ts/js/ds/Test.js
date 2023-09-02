@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const LinkedList_1 = __importDefault(require("./linkedlist/LinkedList"));
 const Stack_1 = __importDefault(require("./stack/Stack"));
 const Queue_1 = __importDefault(require("./queue/Queue"));
+const DoublyLinkedList_1 = __importDefault(require("./doublylinkedlist/DoublyLinkedList"));
 function testLinkedList() {
     var ll = new LinkedList_1.default();
     ll.addFirst(3);
@@ -15,6 +16,22 @@ function testLinkedList() {
     while (ll.head) {
         resValues.push(ll.head.value);
         ll.head = ll.head.next;
+    }
+    console.log(resValues);
+}
+function testDoublyLinkedList() {
+    var ll = new DoublyLinkedList_1.default();
+    ll.addFirst(3);
+    ll.addFirst(5);
+    ll.addLast(100);
+    ll.addLast(120);
+    ll.addLast(120);
+    ll.removeFirst();
+    ll.removeLast();
+    let resValues = [];
+    while (ll.header.next !== ll.trailer) {
+        resValues.push(ll.header.next.value);
+        ll.header.next = ll.header.next.next;
     }
     console.log(resValues);
 }
@@ -43,5 +60,6 @@ function testQueue() {
     console.log(queue.isEmpty());
 }
 // testLinkedList();
+testDoublyLinkedList();
 // testStack();
-testQueue();
+// testQueue();

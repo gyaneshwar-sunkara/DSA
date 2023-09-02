@@ -31,7 +31,6 @@ class LinkedList {
         if (this.isEmpty())
             this.tail = this.head;
         this.s++;
-        return this;
     }
     addLast(value) {
         let newNode = new Node_1.default(value, null);
@@ -41,7 +40,6 @@ class LinkedList {
             this.tail.next = newNode;
         this.tail = newNode;
         this.s++;
-        return this;
     }
     removeFirst() {
         if (this.isEmpty())

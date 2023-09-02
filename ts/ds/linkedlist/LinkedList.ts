@@ -29,22 +29,18 @@ export default class LinkedList<T> {
     return this.tail!.value;
   }
 
-  addFirst(value: T): LinkedList<T> {
+  addFirst(value: T): void {
     this.head = new Node(value, this.head);
     if (this.isEmpty()) this.tail = this.head;
     this.s++;
-
-    return this;
   }
 
-  addLast(value: T): LinkedList<T> {
+  addLast(value: T): void {
     let newNode: Node<T> = new Node(value, null);
     if (this.isEmpty()) this.head = newNode;
     else this.tail!.next = newNode;
     this.tail = newNode;
     this.s++;
-
-    return this;
   }
 
   removeFirst(): T | null {

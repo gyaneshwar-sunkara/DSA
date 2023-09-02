@@ -1,6 +1,7 @@
 import LinkedList from "./linkedlist/LinkedList";
 import Stack from "./stack/Stack";
 import Queue from "./queue/Queue";
+import DoublyLinkedList from "./doublylinkedlist/DoublyLinkedList";
 
 function testLinkedList() {
   var ll: LinkedList<number> = new LinkedList();
@@ -12,6 +13,25 @@ function testLinkedList() {
   while (ll.head) {
     resValues.push(ll.head.value);
     ll.head = ll.head.next;
+  }
+
+  console.log(resValues);
+}
+
+function testDoublyLinkedList() {
+  var ll: DoublyLinkedList<number> = new DoublyLinkedList();
+  ll.addFirst(3);
+  ll.addFirst(5);
+  ll.addLast(100);
+  ll.addLast(120);
+  ll.addLast(120);
+  ll.removeFirst();
+  ll.removeLast();
+
+  let resValues = [];
+  while (ll.header.next !== ll.trailer) {
+    resValues.push(ll.header.next!.value);
+    ll.header.next = ll.header.next!.next;
   }
 
   console.log(resValues);
@@ -44,5 +64,6 @@ function testQueue() {
 }
 
 // testLinkedList();
+testDoublyLinkedList();
 // testStack();
-testQueue();
+// testQueue();
