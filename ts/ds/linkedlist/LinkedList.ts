@@ -57,6 +57,7 @@ export default class LinkedList<T> {
       this.head = null;
       this.tail = null;
     }
+    this.s--;
 
     return deletedHeadValue;
   }
