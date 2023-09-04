@@ -7,6 +7,7 @@ const LinkedList_1 = __importDefault(require("./linkedlist/LinkedList"));
 const Stack_1 = __importDefault(require("./stack/Stack"));
 const Queue_1 = __importDefault(require("./queue/Queue"));
 const DoublyLinkedList_1 = __importDefault(require("./doublylinkedlist/DoublyLinkedList"));
+const BinaryTreeNode_1 = __importDefault(require("./tree/BinaryTreeNode"));
 function testLinkedList() {
     var ll = new LinkedList_1.default();
     ll.addFirst(3);
@@ -59,7 +60,23 @@ function testQueue() {
     console.log(queue.dequeue());
     console.log(queue.isEmpty());
 }
+function testBinaryTree() {
+    var _a, _b, _c, _d;
+    const root = new BinaryTreeNode_1.default(50);
+    const left = new BinaryTreeNode_1.default(3);
+    const right = new BinaryTreeNode_1.default(2);
+    const grandLeft = new BinaryTreeNode_1.default(5);
+    const grandRight = new BinaryTreeNode_1.default(6);
+    const grandGrandLeft = new BinaryTreeNode_1.default(7);
+    root.setLeft(left).setRight(right);
+    left.setLeft(grandLeft).setRight(grandRight);
+    grandLeft.setLeft(grandGrandLeft);
+    console.log(root.height);
+    console.log((_b = (_a = root.left) === null || _a === void 0 ? void 0 : _a.left) === null || _b === void 0 ? void 0 : _b.value);
+    console.log((_d = (_c = root.left) === null || _c === void 0 ? void 0 : _c.left) === null || _d === void 0 ? void 0 : _d.height);
+}
 // testLinkedList();
-testDoublyLinkedList();
+// testDoublyLinkedList();
 // testStack();
 // testQueue();
+testBinaryTree();

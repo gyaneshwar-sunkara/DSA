@@ -2,6 +2,7 @@ import LinkedList from "./linkedlist/LinkedList";
 import Stack from "./stack/Stack";
 import Queue from "./queue/Queue";
 import DoublyLinkedList from "./doublylinkedlist/DoublyLinkedList";
+import BinaryTreeNode from "./tree/BinaryTreeNode";
 
 function testLinkedList() {
   var ll: LinkedList<number> = new LinkedList();
@@ -63,7 +64,27 @@ function testQueue() {
   console.log(queue.isEmpty());
 }
 
+function testBinaryTree() {
+  const root = new BinaryTreeNode<number>(50);
+  const left = new BinaryTreeNode<number>(3);
+  const right = new BinaryTreeNode<number>(2);
+  const grandLeft = new BinaryTreeNode<number>(5);
+  const grandRight = new BinaryTreeNode<number>(6);
+  const grandGrandLeft = new BinaryTreeNode<number>(7);
+
+  root.setLeft(left).setRight(right);
+
+  left.setLeft(grandLeft).setRight(grandRight);
+
+  grandLeft.setLeft(grandGrandLeft);
+
+  console.log(root.height);
+  console.log(root.left?.left?.value);
+  console.log(root.left?.left?.height);
+}
+
 // testLinkedList();
-testDoublyLinkedList();
+// testDoublyLinkedList();
 // testStack();
 // testQueue();
+testBinaryTree();
