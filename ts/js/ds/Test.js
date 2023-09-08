@@ -8,6 +8,7 @@ const Stack_1 = __importDefault(require("./stack/Stack"));
 const Queue_1 = __importDefault(require("./queue/Queue"));
 const DoublyLinkedList_1 = __importDefault(require("./doublylinkedlist/DoublyLinkedList"));
 const BinaryTreeNode_1 = __importDefault(require("./tree/BinaryTreeNode"));
+const BinaryTreeUtils_1 = require("./tree/BinaryTreeUtils");
 function testLinkedList() {
     var ll = new LinkedList_1.default();
     ll.addFirst(3);
@@ -70,19 +71,24 @@ function testBinaryTree() {
     root.setLeft(left).setRight(right);
     left.setLeft(grandLeft).setRight(grandRight);
     console.log(root.height);
+    console.log(root.leftHeight);
+    console.log(root.rightHeight);
     console.log((_b = (_a = root.left) === null || _a === void 0 ? void 0 : _a.left) === null || _b === void 0 ? void 0 : _b.value);
     console.log((_d = (_c = root.left) === null || _c === void 0 ? void 0 : _c.left) === null || _d === void 0 ? void 0 : _d.height);
     let inOrderArray = [];
-    root.inOrderTraversal(root, inOrderArray);
+    (0, BinaryTreeUtils_1.inOrderTraversal)(root, inOrderArray);
     let preOrderArray = [];
-    root.preOrderTraversal(root, preOrderArray);
+    (0, BinaryTreeUtils_1.preOrderTraversal)(root, preOrderArray);
     let postOrderArray = [];
-    root.postOrderTraversal(root, postOrderArray);
-    let levelOrderArray = root.breadthFirstSearch(root);
+    (0, BinaryTreeUtils_1.postOrderTraversal)(root, postOrderArray);
+    let levelOrderArray = (0, BinaryTreeUtils_1.breadthFirstSearch)(root);
     console.log(inOrderArray);
     console.log(preOrderArray);
     console.log(postOrderArray);
     console.log(levelOrderArray);
+    console.log((0, BinaryTreeUtils_1.maxDepth)(root));
+    (0, BinaryTreeUtils_1.invertTree)(root);
+    console.log((0, BinaryTreeUtils_1.breadthFirstSearch)(root));
 }
 // testLinkedList();
 // testDoublyLinkedList();

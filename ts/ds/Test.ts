@@ -3,6 +3,14 @@ import Stack from "./stack/Stack";
 import Queue from "./queue/Queue";
 import DoublyLinkedList from "./doublylinkedlist/DoublyLinkedList";
 import BinaryTreeNode from "./tree/BinaryTreeNode";
+import {
+  breadthFirstSearch,
+  inOrderTraversal,
+  invertTree,
+  maxDepth,
+  postOrderTraversal,
+  preOrderTraversal,
+} from "./tree/BinaryTreeUtils";
 
 function testLinkedList() {
   var ll: LinkedList<number> = new LinkedList();
@@ -75,24 +83,31 @@ function testBinaryTree() {
   left.setLeft(grandLeft).setRight(grandRight);
 
   console.log(root.height);
+  console.log(root.leftHeight);
+  console.log(root.rightHeight);
   console.log(root.left?.left?.value);
   console.log(root.left?.left?.height);
 
   let inOrderArray: number[] = [];
-  root.inOrderTraversal(root, inOrderArray);
+  inOrderTraversal(root, inOrderArray);
 
   let preOrderArray: number[] = [];
-  root.preOrderTraversal(root, preOrderArray);
+  preOrderTraversal(root, preOrderArray);
 
   let postOrderArray: number[] = [];
-  root.postOrderTraversal(root, postOrderArray);
+  postOrderTraversal(root, postOrderArray);
 
-  let levelOrderArray: number[] = root.breadthFirstSearch(root);
+  let levelOrderArray: number[] = breadthFirstSearch(root);
 
   console.log(inOrderArray);
   console.log(preOrderArray);
   console.log(postOrderArray);
   console.log(levelOrderArray);
+
+  console.log(maxDepth(root));
+
+  invertTree(root);
+  console.log(breadthFirstSearch(root));
 }
 
 // testLinkedList();

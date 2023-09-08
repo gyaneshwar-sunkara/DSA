@@ -13,16 +13,16 @@ export default class BinaryTreeNode<T> {
 
   get leftHeight(): number {
     if (!this.left) return 0;
-    return this.left.height + 1;
+    return this.left.height;
   }
 
   get rightHeight(): number {
     if (!this.right) return 0;
-    return this.right.height + 1;
+    return this.right.height;
   }
 
   get height(): number {
-    return Math.max(this.leftHeight, this.rightHeight);
+    return Math.max(this.leftHeight, this.rightHeight) + 1;
   }
 
   setLeft(node: BinaryTreeNode<T>): BinaryTreeNode<T> {
@@ -65,51 +65,5 @@ export default class BinaryTreeNode<T> {
     }
 
     return false;
-  }
-
-  inOrderTraversal(node: BinaryTreeNode<T>, arr: Array<T>) {
-    if (node === null) {
-      return;
-    }
-    this.inOrderTraversal(node.left!, arr);
-    arr.push(node.value!);
-    this.inOrderTraversal(node.right!, arr);
-  }
-
-  preOrderTraversal(node: BinaryTreeNode<T>, arr: Array<T>) {
-    if (node === null) {
-      return;
-    }
-    arr.push(node.value!);
-    this.preOrderTraversal(node.left!, arr);
-    this.preOrderTraversal(node.right!, arr);
-  }
-
-  postOrderTraversal(node: BinaryTreeNode<T>, arr: Array<T>) {
-    if (node === null) {
-      return;
-    }
-    this.postOrderTraversal(node.left!, arr);
-    this.postOrderTraversal(node.right!, arr);
-    arr.push(node.value!);
-  }
-
-  breadthFirstSearch(node: BinaryTreeNode<T>): Array<T> {
-    const arr: Array<T> = [];
-    const queue: BinaryTreeNode<T>[] = [];
-    queue.push(node);
-    while (queue.length > 0) {
-      let tempNode = queue.shift();
-      arr.push(tempNode!.value!);
-
-      if (tempNode!.left) {
-        queue.push(tempNode!.left);
-      }
-
-      if (tempNode!.right) {
-        queue.push(tempNode!.right);
-      }
-    }
-    return arr;
   }
 }
