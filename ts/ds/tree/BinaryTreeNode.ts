@@ -66,4 +66,35 @@ export default class BinaryTreeNode<T> {
 
     return false;
   }
+
+  inOrderTraversal(node: BinaryTreeNode<T>, arr: Array<T>) {
+    if (node === null) {
+      return arr;
+    }
+    this.inOrderTraversal(node.left!, arr);
+    arr.push(node.value!);
+    this.inOrderTraversal(node.right!, arr);
+  }
+
+  preOrderTraversal(node: BinaryTreeNode<T>, arr: Array<T>) {
+    if (node === null) {
+      return arr;
+    }
+    arr.push(node.value!);
+    this.preOrderTraversal(node.left!, arr);
+    this.preOrderTraversal(node.right!, arr);
+  }
+
+  postOrderTraversal(node: BinaryTreeNode<T>, arr: Array<T>) {
+    if (node === null) {
+      return arr;
+    }
+    this.postOrderTraversal(node.left!, arr);
+    this.postOrderTraversal(node.right!, arr);
+    arr.push(node.value!);
+  }
+
+  breadthFirstSearch(node: BinaryTreeNode<T>, arr: Array<T>) {
+    
+  }
 }

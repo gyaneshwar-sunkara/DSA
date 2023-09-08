@@ -62,18 +62,25 @@ function testQueue() {
 }
 function testBinaryTree() {
     var _a, _b, _c, _d;
-    const root = new BinaryTreeNode_1.default(50);
-    const left = new BinaryTreeNode_1.default(3);
-    const right = new BinaryTreeNode_1.default(2);
-    const grandLeft = new BinaryTreeNode_1.default(5);
-    const grandRight = new BinaryTreeNode_1.default(6);
-    const grandGrandLeft = new BinaryTreeNode_1.default(7);
+    const root = new BinaryTreeNode_1.default(1);
+    const left = new BinaryTreeNode_1.default(2);
+    const right = new BinaryTreeNode_1.default(3);
+    const grandLeft = new BinaryTreeNode_1.default(4);
+    const grandRight = new BinaryTreeNode_1.default(5);
     root.setLeft(left).setRight(right);
     left.setLeft(grandLeft).setRight(grandRight);
-    grandLeft.setLeft(grandGrandLeft);
     console.log(root.height);
     console.log((_b = (_a = root.left) === null || _a === void 0 ? void 0 : _a.left) === null || _b === void 0 ? void 0 : _b.value);
     console.log((_d = (_c = root.left) === null || _c === void 0 ? void 0 : _c.left) === null || _d === void 0 ? void 0 : _d.height);
+    let inOrderArray = [];
+    root.inOrderTraversal(root, inOrderArray);
+    let preOrderArray = [];
+    root.preOrderTraversal(root, preOrderArray);
+    let postOrderArray = [];
+    root.postOrderTraversal(root, postOrderArray);
+    console.log(inOrderArray);
+    console.log(preOrderArray);
+    console.log(postOrderArray);
 }
 // testLinkedList();
 // testDoublyLinkedList();
