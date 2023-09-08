@@ -53,7 +53,7 @@ class BinaryTreeNode {
     }
     inOrderTraversal(node, arr) {
         if (node === null) {
-            return arr;
+            return;
         }
         this.inOrderTraversal(node.left, arr);
         arr.push(node.value);
@@ -61,7 +61,7 @@ class BinaryTreeNode {
     }
     preOrderTraversal(node, arr) {
         if (node === null) {
-            return arr;
+            return;
         }
         arr.push(node.value);
         this.preOrderTraversal(node.left, arr);
@@ -69,11 +69,27 @@ class BinaryTreeNode {
     }
     postOrderTraversal(node, arr) {
         if (node === null) {
-            return arr;
+            return;
         }
         this.postOrderTraversal(node.left, arr);
         this.postOrderTraversal(node.right, arr);
         arr.push(node.value);
+    }
+    breadthFirstSearch(node) {
+        const arr = [];
+        const queue = [];
+        queue.push(node);
+        while (queue.length > 0) {
+            let tempNode = queue.shift();
+            arr.push(tempNode.value);
+            if (tempNode.left) {
+                queue.push(tempNode.left);
+            }
+            if (tempNode.right) {
+                queue.push(tempNode.right);
+            }
+        }
+        return arr;
     }
 }
 exports.default = BinaryTreeNode;

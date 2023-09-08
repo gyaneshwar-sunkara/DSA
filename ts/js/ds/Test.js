@@ -78,9 +78,11 @@ function testBinaryTree() {
     root.preOrderTraversal(root, preOrderArray);
     let postOrderArray = [];
     root.postOrderTraversal(root, postOrderArray);
+    let levelOrderArray = root.breadthFirstSearch(root);
     console.log(inOrderArray);
     console.log(preOrderArray);
     console.log(postOrderArray);
+    console.log(levelOrderArray);
 }
 // testLinkedList();
 // testDoublyLinkedList();
