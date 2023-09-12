@@ -9,7 +9,7 @@ const Queue_1 = __importDefault(require("./queue/Queue"));
 const DoublyLinkedList_1 = __importDefault(require("./doublylinkedlist/DoublyLinkedList"));
 const BinaryTreeNode_1 = __importDefault(require("./tree/BinaryTreeNode"));
 const BinaryTreeUtils_1 = require("./tree/BinaryTreeUtils");
-const BinarySearchTree_1 = __importDefault(require("./tree/BinarySearchTree"));
+const BinarySearchTreeNode_1 = __importDefault(require("./tree/BinarySearchTreeNode"));
 function testLinkedList() {
     var ll = new LinkedList_1.default();
     ll.addFirst(3);
@@ -92,7 +92,7 @@ function testBinaryTree() {
     console.log((0, BinaryTreeUtils_1.breadthFirstSearch)(root));
 }
 function testBinarySearchTree() {
-    const root = new BinarySearchTree_1.default(1);
+    const root = new BinarySearchTreeNode_1.default(198);
     root.insert(23);
     root.insert(123);
     let inOrderArray = [];

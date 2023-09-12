@@ -11,7 +11,7 @@ import {
   postOrderTraversal,
   preOrderTraversal,
 } from "./tree/BinaryTreeUtils";
-import BinarySearchTree from "./tree/BinarySearchTree";
+import BinarySearchTreeNode from "./tree/BinarySearchTreeNode";
 
 function testLinkedList() {
   var ll: LinkedList<number> = new LinkedList();
@@ -112,7 +112,7 @@ function testBinaryTree() {
 }
 
 function testBinarySearchTree() {
-  const root = new BinarySearchTree<number>(1);
+  const root = new BinarySearchTreeNode<number>(198);
   root.insert(23);
   root.insert(123);
 
