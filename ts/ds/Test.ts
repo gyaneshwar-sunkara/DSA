@@ -11,6 +11,7 @@ import {
   postOrderTraversal,
   preOrderTraversal,
 } from "./tree/BinaryTreeUtils";
+import BinarySearchTree from "./tree/BinarySearchTree";
 
 function testLinkedList() {
   var ll: LinkedList<number> = new LinkedList();
@@ -110,8 +111,19 @@ function testBinaryTree() {
   console.log(breadthFirstSearch(root));
 }
 
+function testBinarySearchTree() {
+  const root = new BinarySearchTree<number>(1);
+  root.insert(23);
+  root.insert(123);
+
+  let inOrderArray: number[] = [];
+  inOrderTraversal(root, inOrderArray);
+  console.log(inOrderArray);
+}
+
 // testLinkedList();
 // testDoublyLinkedList();
 // testStack();
 // testQueue();
-testBinaryTree();
+// testBinaryTree();
+testBinarySearchTree();

@@ -1,4 +1,5 @@
 export default class BinaryTreeNode<T> {
+  [x: string]: any;
   left: BinaryTreeNode<T> | null;
   right: BinaryTreeNode<T> | null;
   parent: BinaryTreeNode<T> | null;
