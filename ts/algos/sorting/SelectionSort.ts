@@ -10,7 +10,7 @@
  *
  *  */
 
-export default function sort(arr: Array<number | string>) {
+export default function sort(arr: Array<number | string>): Array<number | string> {
   for (let i = 0; i < arr.length - 1; i++) {
     let minIndex = i;
 

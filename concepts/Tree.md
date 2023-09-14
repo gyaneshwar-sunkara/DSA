@@ -1,3 +1,12 @@
+## AVL Tree
+An AVL tree defined as a self-balancing Binary Search Tree (BST) where the difference between heights of left and right subtrees for any node cannot be more than one.
+
+The AVL tree is named after its inventors, Georgy Adelson-Velsky and Evgenii Landis.
+
+### Balance Factor
+The difference between the heights of the left subtree and the right subtree for any node is known as the balance factor of the node.
+
+
 ## Tree Traversals
 
 A Tree Data Structure can be traversed in following ways:

@@ -10,7 +10,9 @@
  *
  *  */
 
-export default function sort(arr: Array<number | string>) {
+export default function sort(
+  arr: Array<number | string>
+): Array<number | string> {
   let i: number, j: number, key: number | string;
   for (i = 1; i < arr.length; i++) {
     key = arr[i];
