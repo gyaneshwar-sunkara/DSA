@@ -16,18 +16,6 @@ export default function sort(arr: Array<number | string>): Array<number | string
   return arr;
 }
 
-function quickSort(
-  arr: Array<number | string>,
-  low: number,
-  high: number
-): void {
-  if (low < high) {
-    let pi: number = partition(arr, low, high);
-    quickSort(arr, low, pi - 1);
-    quickSort(arr, pi, high);
-  }
-}
-
 function partition(
   arr: Array<number | string>,
   low: number,
@@ -51,5 +39,49 @@ function partition(
   return partitionIndex;
 }
 
+function quickSort(
+  arr: Array<number | string>,
+  low: number,
+  high: number
+): void {
+  if (low < high) {
+    let pi: number = partition(arr, low, high);
+    quickSort(arr, low, pi - 1);
+    quickSort(arr, pi, high);
+  }
+}
+
+function quickSort2( arr: Array<any>,
+): Array<any> {
+  const array = [...arr];
+
+  if (array.length <= 1) {
+    return array;
+  }
+
+  const leftArray = [];
+  const rightArray = [];
+
+  const pivotElement = array.shift();
+  const centerArray = [pivotElement];
+
+  while (array.length) {
+    const currentElement = array.shift();
+
+    if (currentElement === pivotElement) {
+      centerArray.push(currentElement);
+    } else if (currentElement! < pivotElement!) {
+      leftArray.push(currentElement);
+    } else {
+      rightArray.push(currentElement);
+    }
+  }
+
+  const leftArraySorted = quickSort2(leftArray);
+  const rightArraySorted = quickSort2(rightArray);
+
+  return leftArraySorted.concat(centerArray, rightArraySorted);
+}
+
 console.log(sort(["d", "b", "a"]));
-console.log(sort([2, 4, 21, 1, 44]));
+console.log(quickSort2([2, 4, 21, 1, 44]));
