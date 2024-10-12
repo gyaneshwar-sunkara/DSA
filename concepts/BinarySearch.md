@@ -1,0 +1,2 @@
+Search space
+Monotonic space
