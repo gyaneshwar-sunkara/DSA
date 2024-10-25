@@ -1,1 +1,1 @@
-# Data Structures in JS & JAVA
+# Data Structures and Algorithms in Python, JS & JAVA
