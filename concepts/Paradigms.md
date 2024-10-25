@@ -1,3 +1,33 @@
+# Problem Solving Paradigms
+    1. Brute Force – Foundation for understanding the problem space.
+    2. Greedy Algorithms – Simple optimization strategy.
+    3. Divide and Conquer – Builds recursion skills.
+    4. Backtracking – For exhaustive search problems.
+    5. Dynamic Programming – For overlapping subproblems.
+    6. Graph Algorithms – Essential for graph-based problems.
+    7. Advanced Techniques – Branch-and-Bound, Memoized Backtracking, etc.
+
+## Brute Force
+What it is
+    
+    Try all possible solutions and choose the best one. It’s a naive approach, but sometimes it helps to understand the problem deeply before optimizing.
+
+When to use
+
+    When the problem space is small (like checking all possible outcomes for a 3x3 board game).
+
+## Greedy
+What it is
+
+    Make the best local decision at every step, hoping that it will lead to the globally optimal solution.
+
+When to use
+
+    When the problem has an optimal substructure (the global solution can be constructed from optimal local choices).
+
+A problem has an optimal substructure when its optimal solution can be constructed by combining the optimal solutions to its smaller subproblems, essentially meaning that making the best choice at each local step will lead to the overall best solution for the entire problem; this property is often used in algorithms like dynamic programming and greedy algorithms & Branch and Bound to efficiently solve complex problems. 
+
+
 ## Divide & Conquer
 
 This technique can be divided into the following three parts:
@@ -13,14 +43,7 @@ Eg: Binary Search, Finding Max and Min, Merge Sort, Quick Sort, Strassen's Matri
 
 
 
-## Greedy
-Greedy Method can be used to solve optimization problem.
 
-Optimization Problem: A problem that requires minimum/maximum result. Can be solved using Greedy, Dynamic Programming & Branch and Bound.
-
-Feasible Solution: For all given solutions, only those satisfying given condition/constraints are feasible solutions.
-
-Optimal Solution: Feasible solution giving optimized solution.
 
 ### Knapsack Problem
 ### Job Sequencing with Deadlines
