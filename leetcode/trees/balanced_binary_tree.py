@@ -18,8 +18,7 @@ class Solution:
         """
         Helper function to check balance by calculating height.
 
-        Returns:
-        - (is_balanced: bool, height: int)
+        Returns: (is_balanced: bool, height: int)
         """
         if not node:
             return True, 0  # Base case: empty subtree is balanced with height 0
@@ -42,11 +41,11 @@ class Solution:
 
     def isBalanced(self, root: Optional[TreeNode]) -> bool:
         """
-        Main function to check if the binary tree is height-balanced.
+        Check if the binary tree is height-balanced.
         
-        Returns:
-        - True if the tree is balanced.
-        - False otherwise.
+        
+        Time Complexity: O(n) - Each node is visited once.
+        Space Complexity: O(h) - The recursion stack depth is proportional to the height of the tree, which is O(log n) for a balanced tree and O(n) for a skewed tree.
         """
         is_balanced, _ = self.checkBalance(root)
         return is_balanced
