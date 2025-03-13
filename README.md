@@ -18,6 +18,6 @@ Contributions are always welcome! If you have a better solution, optimizations, 
 ### Open a Pull Request 🚀
 
 ## 🧑‍💻 Author
-### Gyani (GiGi) Sunkara
+### Gyani Sunkara
 ### GitHub: https://github.com/gyaneshwar-sunkara
 ### LinkedIn: https://www.linkedin.com/in/gyaneshwar-sunkara/
