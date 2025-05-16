@@ -1,3 +1,7 @@
+## XOR
+
+
+
 ## Multiple
 
 A multiple in math are the numbers you get when you multiply a certain number by an integer.
